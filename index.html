@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lá Canteen – Café por assinatura com experiências</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #f7e9d7, #fff5ec);
+      color: #4b2e2e;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+
+    nav div {
+      max-width: 700px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      padding: 12px 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #8b4513;
+      font-weight: bold;
+      font-size: 0.95em;
+    }
+
+    section {
+      max-width: 700px;
+      margin: 100px auto 60px;
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #8b4513;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    ul li::before {
+      content: "☕ ";
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      font-size: 1.05em;
+    }
+
+    form {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    input[type="email"] {
+      padding: 12px;
+      width: 80%;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 12px 24px;
+      background-color: #8b4513;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #5c2e0f;
+    }
+
+    .thank-you {
+      display: none;
+      margin-top: 30px;
+      font-size: 1.2em;
+      color: #4b2e2e;
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div>
+      <a href="#inicio">Início</a>
+      <a href="#como-funciona">Como Funciona</a>
+      <a href="#brindes">Brindes</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#cadastro">Cadastro</a>
+    </div>
+  </nav>
+
+  <section id="inicio">
+    <img src="logo.png" alt="Logo Lá Canteen" style="display:block; margin:0 auto 20px; width:120px;">
+    <h1>Lá Canteen</h1>
+    <h2>Transforme sua rotina com cafés artesanais e experiências exclusivas.</h2>
+    <p style="text-align:center;">No Lá Canteen, cada entrega é uma descoberta. Receba cafés selecionados por especialistas, brindes temáticos e conteúdos sensoriais que elevam o seu momento café a um novo patamar.</p>
+    <ul>
+      <li>Cafés artesanais de diferentes origens e perfis sensoriais</li>
+      <li>Brindes exclusivos: canecas, filtros, receitas e playlists</li>
+      <li>Curadoria personalizada de acordo com seu gosto</li>
+      <li>Entrega mensal com surpresas e experiências únicas</li>
+      <li>Comunidade de amantes de café e desafios interativos</li>
+    </ul>
+  </section>
+
+  <section id="como-funciona">
+    <h2>Como funciona</h2>
+    <p style="text-align:center;">Você escolhe seu perfil de café, nós cuidamos da curadoria e todo mês você recebe uma caixa com cafés artesanais e experiências sensoriais.</p>
+    <ul>
+      <li>📦 Escolha seu plano</li>
+      <li>🎯 Personalize seu gosto</li>
+      <li>🚚 Receba em casa</li>
+      <li>☕ Aproveite e compartilhe</li>
+    </ul>
+  </section>
+
+  <section id="brindes">
+    <h2>Brindes do mês</h2>
+    <p style="text-align:center;">Todo mês, uma surpresa diferente: canecas, filtros, receitas exclusivas e até playlists para acompanhar seu café.</p>
+    <img src="brinde-do-mes.jpg" alt="Brinde do mês">
+  </section>
+
+  <section id="galeria">
+    <h2>Galeria da Comunidade</h2>
+    <p style="text-align:center;">Veja como outros amantes de café estão vivendo a experiência Lá Canteen.</p>
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin-top:20px;">
+      <img src="cliente1.jpg" alt="Cliente feliz" style="width:150px;">
+      <img src="cliente2.jpg" alt="Momento café" style="width:150px;">
+      <img src="cliente3.jpg" alt="Brinde recebido" style="width:150px;">
+    </div>
+  </section>
+
+  <section id="cadastro">
+    <h2>Faça parte da experiência</h2>
+    <p style="text-align:center;">Deixe seu e-mail e seja um dos primeiros a testar o app do Lá Canteen.</p>
+    <form id="signup-form">
+      <input type="email" name="email" placeholder="Digite seu e-mail para receber novidades" required>
+      <button type="submit">Quero experimentar!</button>
+    </form>
+    <div class="thank-you" id="thank-you-message">
+      <p>✅ Obrigado por se inscrever!<br>Você agora faz parte da comunidade <strong>Lá Canteen</strong>.<br>Em breve, enviaremos novidades e convites exclusivos para testar nosso app.</p>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById('signup-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const email = form.email.value;
+
+      fetch("https://formsubmit.co/ajax/lacanteen@outlook.com", {
+        method: "POST",
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: email,
+          _subject: "Novo cadastro no Lá Canteen!"
+        })
+      })
+      .then(response => {
+        if (response.ok) {
+          form.style.display = 'none';
+          document.getElementById('thank-you-message').style.display = 'block';
+        } else {
+          alert("Ocorreu um erro. Tente novamente.");
+        }
+      })
+      .catch(error => {
+        console.error("Erro:", error);
+        alert("Erro ao enviar. Verifique sua conexão.");
+      });
+    });
+  </script>
+
+</body>
+</html>
