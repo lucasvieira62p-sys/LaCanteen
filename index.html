@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Canteen – Seu Ritual, Nossa Curadoria</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Forçar HTTPS -->
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <script>
+    if (location.protocol !== 'https:') {
+      location.replace('https://' + location.host + location.pathname + location.search + location.hash);
+    }
+  </script>
+
+  <style>
+    :root {
+      --primary: #6f4e37;
+      --secondary: #fdfaf6;
+      --accent: #d9b08c;
+      --text: #333;
+      --shadow: rgba(0, 0, 0, 0.1);
+      --radius: 12px;
+      --font-heading: 'Lora', serif;
+      --font-body: 'Open Sans', sans-serif;
+    }
+
+    /* Global */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background: var(--secondary);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    /* Header + Nav */
+    header {
+      background: var(--primary);
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px var(--shadow);
+    }
+    header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+    }
+    header h1 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+    }
+    nav ul {
+      display: flex;
+      gap: 1.2rem;
+    }
+    nav li { list-style: none; }
+    nav a {
+      font-weight: 600;
+      padding: 0.3rem 0.6rem;
+      border-radius: var(--radius);
+      transition: background 0.3s;
+    }
+    nav a:hover { background: var(--accent); }
+
+    /* Hero */
+    .hero {
+      background: var(--accent) url('https://source.unsplash.com/1200x400/?coffee') center/cover no-repeat;
+      color: #fff;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+      padding: 4rem 0;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .hero h2 {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero p { font-size: 1.2rem; }
+
+    /* Sections */
+    section {
+      padding: 3rem 0;
+    }
+    section:nth-child(even) {
+      background: #fff;
+    }
+    section h2 {
+      font-family: var(--font-heading);
+      color: var(--primary);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    section p { max-width: 800px; margin: auto 0 1.5rem; }
+
+    /* Missão & Valores */
+    #missao ul {
+      list-style: inside disc;
+      max-width: 600px;
+      margin: auto;
+      text-align: left;
+    }
+
+    /* Quiz Resumido */
+    #quiz-summary ol {
+      list-style: decimal inside;
+      max-width: 600px;
+      margin: auto;
+      text-align: left;
+    }
+    #quiz-summary button {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.8rem 1.8rem;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius);
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+    #quiz-summary button:hover {
+      background: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    /* Depoimentos */
+    #depoimentos blockquote {
+      background: #fff;
+      border-left: 6px solid var(--primary);
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem auto;
+      max-width: 700px;
+      font-style: italic;
+      box-shadow: 0 2px 6px var(--shadow);
+    }
+
+    /* Planos */
+    .planos {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .plano {
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px var(--shadow);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .plano:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px var(--shadow);
+    }
+    .plano h3 {
+      font-family: var(--font-heading);
+      color: var(--primary);
+      margin-bottom: 0.8rem;
+      font-size: 1.4rem;
+    }
+    .plano p { margin-bottom: 1rem; }
+    .plano strong {
+      display: inline-block;
+      margin-top: 0.5rem;
+      color: var(--primary);
+    }
+
+    /* B2B */
+    #b2b p {
+      max-width: 700px;
+      margin: auto;
+      text-align: left;
+    }
+
+    /* Como Funciona */
+    #como-funciona ul {
+      list-style: inside circle;
+      max-width: 700px;
+      margin: auto;
+      text-align: left;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--primary);
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem 0;
+      margin-top: 2rem;
+    }
+    footer p { font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>La Canteen</h1>
+      <nav>
+        <ul>
+          <li><a href="#proposta">Proposta</a></li>
+          <li><a href="#missao">Missão</a></li>
+          <li><a href="#quiz-summary">Quiz</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#planos">Planos</a></li>
+          <li><a href="#b2b">B2B</a></li>
+          <li><a href="#como-funciona">Como Funciona</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Seu Ritual, Nossa Curadoria</h2>
+      <p>Cada gole, uma descoberta especial de cafés de origem única.</p>
+    </div>
+  </section>
+
+  <section id="proposta" class="container">
+    <h2>Nossa Proposta</h2>
+    <p>
+      Conectar você diretamente a lotes selecionados de pequenos produtores, valorizando
+      frescor, sabor e a história de cada grão.
+    </p>
+  </section>
+
+  <section id="missao">
+    <div class="container">
+      <h2>Missão e Valores</h2>
+      <ul>
+        <li>Missão: democratizar cafés especiais e apoiar produtores artesanais.</li>
+        <li>Valores: sustentabilidade, comércio justo e qualidade impecável.</li>
+        <li>Visão: formar uma comunidade apaixonada por descobertas sensoriais.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="quiz-summary" class="container">
+    <h2>Quiz de Curadoria</h2>
+    <p>Em 4 passos rápidos, receba sua recomendação de plano personalizada:</p>
+    <ol>
+      <li>Tipo de experiência desejada</li>
+      <li>Frequência de consumo</li>
+      <li>Métodos de preparo preferidos</li>
+      <li>Interesse em brindes e localização</li>
+    </ol>
+    <button onclick="window.location.href='#quiz-completo'">Faça o Quiz Completo</button>
+  </section>
+
+  <section id="depoimentos">
+    <div class="container">
+      <h2>Depoimentos</h2>
+      <blockquote>
+        “La Canteen transformou meu café da manhã. Agora entendo cada nota e aroma.” — Marina S.
+      </blockquote>
+      <blockquote>
+        “Os workshops são incríveis e os brindes sempre surpreendem!” — João R.
+      </blockquote>
+    </div>
+  </section>
+
+  <section id="planos">
+    <div class="container">
+      <h2>Planos Mensais</h2>
+      <div class="planos">
+        <div class="plano">
+          <h3>Essência</h3>
+          <p>1 café de origem única + ficha técnica detalhada</p>
+          <strong>R$ 39,90 / mês</strong>
+        </div>
+        <div class="plano">
+          <h3>Brindes</h3>
+          <p>2 cafés + ficha técnica + mimos surpresa</p>
+          <strong>R$ 69,90 / mês</strong>
+        </div>
+        <div class="plano">
+          <h3>Eventos</h3>
+          <p>3 cafés + ficha técnica + passe para workshops mensais</p>
+          <strong>R$ 99,90 / mês</strong>
+        </div>
+        <div class="plano">
+          <h3>Premium</h3>
+          <p>4 cafés + ficha técnica + itens exclusivos e eventos VIP</p>
+          <strong>R$ 129,90 / mês</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="b2b">
+    <div class="container">
+      <h2>Para Empresas</h2>
+      <p>
+        Planos corporativos para team building, eventos internos e kits de boas-vindas.
+        Logística especializada, personalização de rótulos e suporte dedicado.
+      </p>
+    </div>
+  </section>
+
+  <section id="como-funciona">
+    <div class="container">
+      <h2>Como Funciona</h2>
+      <p>
+        Trabalhamos em dropshipping direto de pequenos agricultores certificados. Cada
+        etapa é pensada para garantir frescor, rastreabilidade e impacto positivo:
+      </p>
+      <ul>
+        <li>Seleção cuidadosa de produtores premiados</li>
+        <li>Torrefação artesanal em lotes exclusivos</li>
+        <li>Envio sob demanda para reduzir desperdício</li>
+        <li>Embalagens eco-friendly e rastreáveis</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 La Canteen – Centro, 123 • Mogi das Cruzes, SP</p>
+      <p>Siga-nos: Instagram | Spotify</p>
+    </div>
+  </footer>
+
+</body>
+</html>
